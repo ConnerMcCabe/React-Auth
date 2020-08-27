@@ -1,2 +1,2 @@
 ## React OAuth
-a simple react app with Auth (coming soon)
+a clone of a popular listing site, adding OAuth later
