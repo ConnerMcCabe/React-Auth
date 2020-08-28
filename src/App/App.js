@@ -8,7 +8,7 @@ class App extends Component {
     
     return (
       <div className=''>
-        <h2>AirBnB</h2>
+        
         <Home />
         <Header />
       {/* Home */}
