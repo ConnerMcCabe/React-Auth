@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
+import Home from '../Components/Home/Home';
 
 class App extends Component {
   render() {
     
     return (
       <div className=''>
-        <h2>AirBnB?</h2>
-
+        <h2>AirBnB</h2>
+        <Home />
+      {/* Home */}
         {/* Header */}
 
         {/* Banner */}
@@ -15,6 +17,7 @@ class App extends Component {
         {/* Cards */}
 
         {/* Footer */}
+      {/* SearchPage */}
       </div>
     );
   }
