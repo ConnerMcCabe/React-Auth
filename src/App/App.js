@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Home from '../Components/Home/Home';
+import Header from '../Components/Header/Header';
 
 class App extends Component {
   render() {
@@ -9,6 +10,7 @@ class App extends Component {
       <div className=''>
         <h2>AirBnB</h2>
         <Home />
+        <Header />
       {/* Home */}
         {/* Header */}
 
