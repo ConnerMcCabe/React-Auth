@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header img {
+  object-fit: scale-down;
+  height: 100px;
+  margin-left: 20px;
+}
+
+.headerSearch {
+  border: 2px solid #DDDDDD;
+  border-radius: 30px 30px 30px 30px;
+}
+
+input {
+  width: 300px !important;
+  cursor: pointer;
+  height: 48px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.43;
+  transition: box-shadow 0.2s ease;
+  border: 1px solid transparent;
+}
