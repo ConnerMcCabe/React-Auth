@@ -17,7 +17,7 @@ class App extends Component {
 
         <Banner />
 
-        {/* Cards */}
+        {/* Message aside */}
 
         {/* Footer */}
       {/* SearchPage */}
