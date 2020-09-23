@@ -15,11 +15,12 @@ function Header() {
         <SearchIcon />
       </div>
       <div className="headerUtility">
-        <button>Become a Host</button>
+        <button>Become a Member</button>
         <LanguageIcon />
         <div className="headerSignUp">
           <MenuIcon />
           <AccountCircleIcon />
+          
         </div>
       </div>
     </div>
