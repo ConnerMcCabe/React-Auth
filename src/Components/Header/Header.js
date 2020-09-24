@@ -1,9 +1,9 @@
 import React from 'react';
-import LanguageIcon from '@material-ui/icons/Language';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import MenuIcon from '@material-ui/icons/Menu';
 import LocalDiningIcon from '@material-ui/icons/LocalDining';
+import { Button } from "@material-ui/core"
 import './Header.css'
 
 function Header() {
@@ -15,8 +15,7 @@ function Header() {
         <SearchIcon />
       </div>
       <div className="headerUtility">
-        <button>Become a Member</button>
-        <LanguageIcon />
+      <Button variant='outlined'>Become a Member</Button>
         <div className="headerSignUp">
           <MenuIcon />
           <AccountCircleIcon />

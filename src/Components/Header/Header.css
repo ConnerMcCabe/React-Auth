@@ -18,20 +18,23 @@ svg {
   align-items: center;
   justify-content: space-around;
   width: 300px;
-  border: 2px solid #DDDDDD;
   border-radius: 999px;
   cursor: pointer;
   height: 48px;
   font-weight: bold;
-  transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.5s ease;
   border: 2px solid #DDDDDD;
+}
+
+.headerSearch:hover {
+  border: 3px solid #858585;
 }
 
 input {
   border: none;
   padding-left: 20px;
   font-size: 14px;
-  line-height: 1.43;
+  line-height: 2;
   
 }
 
