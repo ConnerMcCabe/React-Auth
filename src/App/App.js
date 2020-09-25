@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 import firebase from 'firebase/app';
-import 'firebase/firestore'
-import 'firebase/auth'
-import { useAuthState } from 'react-firebase-hooks/auth'
-import { useCollectionData } from 'react-firebase-hooks/firestore'
+import 'firebase/firestore';
+import 'firebase/auth';
+import 'firebase/analytics';
 
 import './App.css';
 import Home from '../Components/Home/Home';
 import Header from '../Components/Header/Header';
 import Banner from '../Components/Banner/Banner';
+import Message from '../Components/Message/Message';
 
 
 firebase.initializeApp({
@@ -23,14 +24,14 @@ firebase.initializeApp({
   measurementId: "G-RERKWQXM8V"
 })
 
-firebase.analytics();
 
 const auth = firebase.auth();
-const firestore = firebase.firestore();
-const [user] = useAuthState(auth);
+firebase.analytics();
+
 
 class App extends Component {
   render() {
+    const [user] = useAuthState(auth);
     
     return (
       <div className='App'>
@@ -38,14 +39,34 @@ class App extends Component {
         <Home />
         <Header />
         <Banner />
+        <Message />
 
-        {/* Message aside */}
 
+        
+        <SignOut />
+        <SignIn />
+      
         {/* Footer */}
-      {/* SearchPage */}
       </div>
     );
   }
 }
+
+function SignIn() {
+  const signInWithGoogle = () => {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    auth.signInWithPopup(provider);
+  }
+  return (
+    <button onClick={signInWithGoogle}>Sign In</button>
+  )
+}
+
+function SignOut() {
+  return auth.currentUser && (
+    <button onClick={() => auth.SignOut()}>Sign Out</button>
+  )
+}
+
 
 export default App;
